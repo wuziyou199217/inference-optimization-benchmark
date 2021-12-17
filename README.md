@@ -1,1 +1,1 @@
-Try to build an unified benchmark to evaluate the performance of various inference compilers like TVM/TensorRT/XLA/AIACC etc. on classical deep learning models.
+Try to build an unified benchmark to evaluate the performance of various inference optimization frameworks including TVM/TensorRT/XLA/AIACC/Blade etc. on classical deep learning models.
