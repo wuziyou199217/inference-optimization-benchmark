@@ -314,7 +314,7 @@ def tf_benchmark(image, run_count, times_per_run):
         mean = np.mean(duration_list)
 
         ordered_list = np.sort(duration_list, axis=-1, kind='quicksort', order=None)
-        pos99 = np.rint(run_count * 0.99)
+        pos99 = (np.rint(run_count * 0.99) - 1) if np.rint(run_count * 0.99) > 0 else 0
         p99 = ordered_list[pos99.astype(np.int)]
 
         print("tf_benchmark:")
