@@ -25,15 +25,15 @@ Please refer to https://www.tensorflow.org/install
 """
 
 # os and numpy
+import os
 import numpy as np
-import os.path
 
 # Tensorflow imports
 import tensorflow.compat.v1 as tf
 
 # Blade
 import blade
-from blade.model.tf_model import TfModel
+# from blade.model.tf_model import TfModel
 
 import logging
 import logging.handlers
@@ -53,34 +53,11 @@ if gpus:
     except RuntimeError as e:
         print("experimental.set_memory_growth option is not available: {}".format(e))
 
-# Base location for model related files.
-# repo_base = "https://github.com/dmlc/web-data/raw/main/tensorflow/models/InceptionV1/"
-
-######################################################################
-# Tutorials
-# ---------
-# Please refer docs/frontend/tensorflow.md for more details for various models
-# from tensorflow.
-
-# model_name = "frozen_resnet50_v1.pb"
-# model_url = os.path.join(repo_base, model_name)
-
-# Image label map
-# map_proto = "imagenet_2012_challenge_label_map_proto.pbtxt"
-# map_proto_url = os.path.join(repo_base, map_proto)
-
-# Human readable text for labels
-# label_map = "imagenet_synset_to_human_label_map.txt"
-# label_map_url = os.path.join(repo_base, label_map)
-
 ######################################################################
 # Download required files
 # -----------------------
-# Download files listed above.
-# from tvm.contrib.download import download_testdata
 
 model_path = "../models/frozen_resnet50_v1.pb" 
-model_opt_path = "frozen_resnet50_v1_opt.pb" 
 img_path = "../images/elephant-299.jpg"
 # img_path = download_testdata(image_url, img_name, module="data")
 # map_proto_path = download_testdata(map_proto_url, map_proto, module="data")
@@ -91,45 +68,11 @@ img_path = "../images/elephant-299.jpg"
 # -----------------------
 # Run the corresponding model on tensorflow
 
-def create_graph(model):
-    """Creates a graph from saved GraphDef file and returns a saver."""
+def create_graph_and_image(model, image):
     # Creates graph from saved graph_def.pb.
     with tf.gfile.GFile(model, "rb") as f:
         graph_def = tf.GraphDef()
         graph_def.ParseFromString(f.read())
-        graph = tf.import_graph_def(graph_def, name="")
-
-######################################################################
-# Benchmark
-# ------------------
-# Generate Benchmark for built tvm module inference.
-
-# def benchmark(compiled_model, target, input_data, run_count, times_per_run):
-#     """
-#     Benchmark the model
-#     """
-#     dev = tvm.device(target, 0)
-#     module = graph_executor.GraphModule(compiled_model["default"](dev))
-# 
-#     module.set_input("input", input_data)
-# 
-#     # Evaluate
-#     return module.benchmark(dev, number=run_count, repeat=times_per_run)
-
-# print(benchmark(lib, "cuda", tvm.nd.array(x.astype(dtype)), 1, 1000))
-
-######################################################################
-# Tensorflow Benchmark
-# ------------------
-# Generate Benchmark for tensorflow pb graph inference.
-
-def tf_benchmark(model, image, run_count, times_per_run):
-    """
-    Benchmark the model
-    """    
-    # Creates graph from saved GraphDef.
-    create_graph(model)
-
     # Prepare image data
     if not tf.gfile.Exists(image):
         tf.logging.fatal("File does not exist %s", image)
@@ -138,10 +81,26 @@ def tf_benchmark(model, image, run_count, times_per_run):
     tf_data = tf.image.resize_images(tf_data, (224, 224))
     image_data = tf.keras.preprocessing.image.img_to_array(tf_data)
     image_data = np.expand_dims(image_data, axis = 0)
+    return graph_def, image_data
+
+graph_def, image_data = create_graph_and_image(model_path, img_path)
+
+######################################################################
+# Tensorflow Benchmark
+# ------------------
+# Generate Benchmark for tensorflow pb graph inference.
+
+def tf_benchmark(graph_def, image_data, run_count, times_per_run):
+    """
+    Benchmark the model
+    """    
+    tf.reset_default_graph()
 
     with tf.Session() as sess:
+        sess.graph.as_default()
+        tf.import_graph_def(graph_def, name="")
         softmax_tensor = sess.graph.get_tensor_by_name("resnet_v1_50/predictions/Reshape_1:0")
-        
+        # Benchmark! 
         duration_list = np.array([])
         for i in range(run_count):
             time_start = time.time()
@@ -169,40 +128,36 @@ def tf_benchmark(model, image, run_count, times_per_run):
         print(pos99)
     return
 
-# tf_benchmark(model_path, img_path, 1000, 1)
-tf_benchmark(model_opt_path, img_path, 1000, 1)
+# tf_benchmark(graph_def, image_data, 1000, 1)
 
 ######################################################################
 # Tensorflow+Blade Benchmark
 # ------------------
 # Generate optimized model by Blade.
 
-def blade_optimize():
+def blade_optimize(graph_def, image_data, aggressive_opt):
     """
     Optimize the model by Blade
     """    
-    saved_model_dir = '../models/'
+    opt_level = 'o1'
+    if (aggressive_opt):
+        opt_level = 'o2'
 
-    # 零输入
-    optimized_model, _, report = blade.optimize(
-        saved_model_dir,       # 模型路径。
-        'o1',                  # O1无损优化。或O2有损优化
-        device_type='gpu'      # 面向GPU设备优化。
+    optimized_model, opt_spec, report = blade.optimize(
+        graph_def,             # 模型graph。
+        opt_level,             # O1无损优化。或O2有损优化
+        device_type='gpu',     # 面向GPU设备优化。
+        test_data=[{"input:0": image_data}] # 测试数据
     )
-    
-    # +测试/校正数据集
-    # optimized_model, _, report = blade.optimize(
-    #     saved_model_dir,       # 模型路径。
-    #     'o0',                  # O0无损优化。
-    #     device_type='gpu',     # 面向GPU设备优化。
-    #     test_data=[test_data]  # 测试数据。
-    # )
     
     # 打印优化报告
     print(report)
     # 存储优化模型
-    with tf.gfile.FastGFile('frozen_resnet50_v1_opt.pb', mode='wb') as f:
-        f.write(optimized_model.SerializeToString())
-    return
+    # with tf.gfile.FastGFile('frozen_resnet50_v1_opt.pb', mode='wb') as f:
+        # f.write(optimized_model.SerializeToString())
+    return optimized_model, opt_spec
 
-# blade_optimize()
+optimized_model, opt_spec = blade_optimize(graph_def, image_data, False)
+
+with opt_spec:
+    tf_benchmark(optimized_model, image_data, 1000, 1)

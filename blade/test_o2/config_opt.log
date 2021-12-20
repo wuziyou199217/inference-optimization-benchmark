@@ -1,0 +1,83 @@
+{
+  "software_context": [
+    {
+      "software": "tensorflow",
+      "version": "2.4.0"
+    },
+    {
+      "software": "cuda",
+      "version": "11.0.0"
+    }
+  ],
+  "hardware_context": {
+    "device_type": "gpu",
+    "microarchitecture": "T4"
+  },
+  "user_config": "",
+  "diagnosis": {
+    "model": "tmp_graph.pbtxt",
+    "test_data_source": "user provided",
+    "shape_variation": "static",
+    "message": "",
+    "test_data_info": "input:0 shape: (1, 224, 224, 3) data type: float32"
+  },
+  "optimizations": [
+    {
+      "name": "TfStripUnusedNodes",
+      "status": "effective",
+      "speedup": "na",
+      "pre_run": "na",
+      "post_run": "na"
+    },
+    {
+      "name": "TfFoldConstants",
+      "status": "effective",
+      "speedup": "na",
+      "pre_run": "na",
+      "post_run": "na"
+    },
+    {
+      "name": "TfFoldBatchNorms",
+      "status": "effective",
+      "speedup": "0.96",
+      "pre_run": "9.42 ms",
+      "post_run": "9.86 ms"
+    },
+    {
+      "name": "Tf2TrtPlus",
+      "status": "effective",
+      "speedup": "5.33",
+      "pre_run": "7.63 ms",
+      "post_run": "1.43 ms"
+    },
+    {
+      "name": "TfStripUnusedNodes",
+      "status": "effective",
+      "speedup": "na",
+      "pre_run": "na",
+      "post_run": "na"
+    },
+    {
+      "name": "TfFoldConstants",
+      "status": "effective",
+      "speedup": "5.40",
+      "pre_run": "7.71 ms",
+      "post_run": "1.43 ms"
+    }
+  ],
+  "overall": {
+    "baseline": "7.83 ms",
+    "optimized": "1.53 ms",
+    "speedup": "5.12"
+  },
+  "model_info": {
+    "input_format": "frozen_pb"
+  },
+  "compatibility_list": [
+    {
+      "device_type": "gpu",
+      "microarchitecture": "T4"
+    }
+  ],
+  "model_sdk": {}
+}
