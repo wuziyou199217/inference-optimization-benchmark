@@ -1,0 +1,62 @@
+{
+  "software_context": [
+    {
+      "software": "tensorflow",
+      "version": "2.4.0"
+    },
+    {
+      "software": "cuda",
+      "version": "11.0.0"
+    }
+  ],
+  "hardware_context": {
+    "device_type": "gpu",
+    "microarchitecture": "T4"
+  },
+  "user_config": "",
+  "diagnosis": {
+    "model": "tmp_graph.pbtxt",
+    "test_data_source": "user provided",
+    "shape_variation": "dynamic",
+    "message": "",
+    "test_data_info": "input_ids_1:0 shape: (1, 128) data type: float16\ninput_mask_1:0 shape: (1, 128) data type: float16\nsegment_ids_1:0 shape: (1, 128) data type: float16"
+  },
+  "optimizations": [
+    {
+      "name": "TfStripUnusedNodes",
+      "status": "effective",
+      "speedup": "na",
+      "pre_run": "na",
+      "post_run": "na"
+    },
+    {
+      "name": "TfFoldConstants",
+      "status": "effective",
+      "speedup": "na",
+      "pre_run": "na",
+      "post_run": "na"
+    },
+    {
+      "name": "TfAicompilerGpu",
+      "status": "effective",
+      "speedup": "1.16",
+      "pre_run": "8.99 ms",
+      "post_run": "7.74 ms"
+    }
+  ],
+  "overall": {
+    "baseline": "8.88 ms",
+    "optimized": "7.83 ms",
+    "speedup": "1.13"
+  },
+  "model_info": {
+    "input_format": "frozen_pb"
+  },
+  "compatibility_list": [
+    {
+      "device_type": "gpu",
+      "microarchitecture": "T4"
+    }
+  ],
+  "model_sdk": {}
+}

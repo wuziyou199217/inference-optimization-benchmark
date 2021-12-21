@@ -1,0 +1,406 @@
+2021-12-20 20:34:05,005 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Enable SLS, effective endpoint: http://cn-shanghai.log.aliyuncs.com
+2021-12-20 20:34:05,225 [20698] [WARNING ] [benchmark_blade_bert_base.py:146] Eas daemon is offline
+2021-12-20 20:34:05,569 [20698] [WARNING ] [benchmark_blade_bert_base.py:146] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+2021-12-20 20:34:08,074 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Begin of combine_info_with_blade_config
+2021-12-20 20:34:08,074 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Combine frozen pb info with blade config
+2021-12-20 20:34:08,086 [20698] [WARNING ] [deprecation.py:339] From benchmark_blade_bert_base.py:146: remove_training_nodes (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.remove_training_nodes`
+2021-12-20 20:34:11,122 [20698] [WARNING ] [deprecation.py:339] From benchmark_blade_bert_base.py:146: extract_sub_graph (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.extract_sub_graph`
+2021-12-20 20:34:14,101 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+2021-12-20 20:34:20,618 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_6p5xi469_20211220203414/inputi5y7on6e.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_6p5xi469_20211220203414/output36wehqki.npy in subproc_run
+2021-12-20 20:34:20,618 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_6p5xi469_20211220203414/inputi5y7on6e.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_6p5xi469_20211220203414/output36wehqki.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 600.0, shell mode: True
+2021-12-20 20:34:21,724 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:34:21,723 [20753] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_6p5xi469_20211220203414/inputi5y7on6e.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_6p5xi469_20211220203414/output36wehqki.npy']
+
+2021-12-20 20:34:21,724 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:34:21,723 [20753] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_6p5xi469_20211220203414/inputi5y7on6e.npy
+
+2021-12-20 20:34:26,868 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:34:26,867 [20753] [WARNING ] [subproc_runner_helper.py:9] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:34:26,893 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:34:26,893 [20753] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+
+2021-12-20 20:34:33,697 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:34:33,696 [20753] [INFO    ] [subproc_runner_helper.py:9] Save profile helper results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_6p5xi469_20211220203414/output36wehqki.npy
+
+2021-12-20 20:34:34,309 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_6p5xi469_20211220203414/inputi5y7on6e.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_6p5xi469_20211220203414/output36wehqki.npy
+2021-12-20 20:34:34,311 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Details:
+elapsed: 3151.488, env config: {}
+
+2021-12-20 20:34:40,306 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_b6amkwye_20211220203434/inputqyj2iyx9.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_b6amkwye_20211220203434/outputlxxby6d2.npy in subproc_run
+2021-12-20 20:34:40,307 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_b6amkwye_20211220203434/inputqyj2iyx9.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_b6amkwye_20211220203434/outputlxxby6d2.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 600.0, shell mode: True
+2021-12-20 20:34:41,416 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:34:41,416 [20798] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_b6amkwye_20211220203434/inputqyj2iyx9.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_b6amkwye_20211220203434/outputlxxby6d2.npy']
+
+2021-12-20 20:34:41,417 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:34:41,416 [20798] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_b6amkwye_20211220203434/inputqyj2iyx9.npy
+
+2021-12-20 20:34:46,567 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:34:46,566 [20798] [WARNING ] [subproc_runner_helper.py:9] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:34:46,592 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:34:46,592 [20798] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+
+2021-12-20 20:34:54,893 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:34:54,892 [20798] [INFO    ] [subproc_runner_helper.py:9] Save profile helper results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_b6amkwye_20211220203434/outputlxxby6d2.npy
+
+2021-12-20 20:34:55,511 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_b6amkwye_20211220203434/inputqyj2iyx9.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_b6amkwye_20211220203434/outputlxxby6d2.npy
+2021-12-20 20:34:55,513 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Details:
+elapsed: 8.858, env config: {}
+
+2021-12-20 20:34:55,825 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Test data information, source: TestDataSource.USER_PROVIDED, shape variation: ShapeVariation.DYNAMIC, info: [<blade.data.data.DataInfo object at 0x7f7bfaf152e8>, <blade.data.data.DataInfo object at 0x7f7c00323668>, <blade.data.data.DataInfo object at 0x7f7c00323d68>]
+2021-12-20 20:34:56,335 [20698] [WARNING ] [benchmark_blade_bert_base.py:146] requires pygraphviz http://pygraphviz.github.io/
+Failed to generate png for visualizing the graph, but it will not influence the optimization process. This issue may be caused by the missing of pygraphviz/graphviz-dev. If you want to see the png, try to install them and call the blade again.
+2021-12-20 20:34:56,336 [20698] [WARNING ] [benchmark_blade_bert_base.py:146] requires pygraphviz http://pygraphviz.github.io/
+Failed to export digraph, but it will not influence the optimization process. This issue may be caused by the missing of pygraphviz/graphviz-dev. If you want to see the digraph, try to install them and call the blade again.
+2021-12-20 20:34:57,138 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfRemoveIdentityN:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:35:13,321 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Performing "/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/optimization/gpu_passes/tf_trt_plus_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/Tf2TrtPlus_l_7yfcq1_20211220203507/tf2trt_plus_inputne4cy7r0.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/Tf2TrtPlus_l_7yfcq1_20211220203507/tf2trt_plus_output86g2m1s8.npy"
+2021-12-20 20:35:13,321 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/optimization/gpu_passes/tf_trt_plus_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/Tf2TrtPlus_l_7yfcq1_20211220203507/tf2trt_plus_inputne4cy7r0.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/Tf2TrtPlus_l_7yfcq1_20211220203507/tf2trt_plus_output86g2m1s8.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 60.0, shell mode: True
+2021-12-20 20:35:16,001 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:35:16,000 [20848] [INFO    ] [tf_trt_plus_helper.py:18] Load tf2trt_plus helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/optimization/gpu_passes/tf_trt_plus_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/Tf2TrtPlus_l_7yfcq1_20211220203507/tf2trt_plus_inputne4cy7r0.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/Tf2TrtPlus_l_7yfcq1_20211220203507/tf2trt_plus_output86g2m1s8.npy']
+
+2021-12-20 20:35:16,001 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:35:16,001 [20848] [INFO    ] [tf_trt_plus_helper.py:18] Load tf2trt_plus helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/Tf2TrtPlus_l_7yfcq1_20211220203507/tf2trt_plus_inputne4cy7r0.npy
+
+2021-12-20 20:35:19,708 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:35:19,707 [20848] [WARNING ] [tf_trt_plus_helper.py:18] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:35:23,576 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:35:23,575 [20848] [INFO    ] [tf_trt_plus_helper.py:18] Save tf2trt_plus subgraph results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/Tf2TrtPlus_l_7yfcq1_20211220203507/tf2trt_plus_output86g2m1s8.npy
+
+2021-12-20 20:35:24,278 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/optimization/gpu_passes/tf_trt_plus_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/Tf2TrtPlus_l_7yfcq1_20211220203507/tf2trt_plus_inputne4cy7r0.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/Tf2TrtPlus_l_7yfcq1_20211220203507/tf2trt_plus_output86g2m1s8.npy
+2021-12-20 20:35:28,451 [20698] [WARNING ] [deprecation.py:339] From /usr/local/lib/python3.6/dist-packages/tf2onnx/tf_loader.py:305: convert_variables_to_constants (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.convert_variables_to_constants`
+2021-12-20 20:35:33,087 [20698] [INFO    ] [tfonnx.py:414] Using tensorflow=2.4.0, onnx=1.10.2, tf2onnx=1.9.3/1190aa
+2021-12-20 20:35:33,088 [20698] [INFO    ] [tfonnx.py:415] Using opset <onnx, 9>
+2021-12-20 20:35:34,733 [20698] [INFO    ] [tf_utils.py:278] Computed 0 values for constant folding
+2021-12-20 20:35:36,771 [20698] [INFO    ] [__init__.py:48] Optimizing ONNX model
+2021-12-20 20:35:41,466 [20698] [INFO    ] [__init__.py:83] After optimization: Cast -47 (50->3), Concat -46 (49->3), Const -355 (565->210), Identity -26 (26->0), Mul -22 (181->159), Sub -11 (60->49), Transpose -12 (60->48), Unsqueeze -180 (183->3)
+2021-12-20 20:35:41,531 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Fp16 optimization enabled for tensorrt in Tf2TrtPlus pass
+2021-12-20 20:35:46,250 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Tensorrt optimization failed for subgraph_0.
+2021-12-20 20:35:46,299 [20698] [WARNING ] [benchmark_blade_bert_base.py:146] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+2021-12-20 20:35:49,250 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No TRTEngineOp op has been found after optimization trial.
+2021-12-20 20:35:49,268 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Tf2TrtPlus:{'kind': 'trt_conversion_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:35:49,919 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/optimization/gpu_passes/tf_trt.py`, cwd: /root/inference-optimization-benchmark/blade, timeout: 7200.0, shell mode: False
+2021-12-20 20:35:52,572 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+
+2021-12-20 20:35:52,980 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/optimization/gpu_passes/tf_trt.py
+2021-12-20 20:35:52,985 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Tf2TrtFp32:{'kind': 'skipped', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:35:53,446 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/optimization/gpu_passes/tf_trt.py`, cwd: /root/inference-optimization-benchmark/blade, timeout: 7200.0, shell mode: False
+2021-12-20 20:35:56,096 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+
+2021-12-20 20:35:56,498 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/optimization/gpu_passes/tf_trt.py
+2021-12-20 20:35:56,503 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Tf2TrtFp16:{'kind': 'skipped', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:35:56,503 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] CombinedSwitch:{'kind': 'performace_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:35:56,515 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] CombinedSequence:{'kind': 'performace_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:35:56,705 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+2021-12-20 20:35:57,232 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Graph transformations:
+['remove_nodes(op=Identity)']
+2021-12-20 20:36:01,879 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Found 0 patterns
+2021-12-20 20:36:02,078 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfFuseEmbedding:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:36:02,659 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] transform: strip_unused_nodes
+2021-12-20 20:36:06,217 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfStripUnusedNodes:{'kind': 'success', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:36:10,647 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfFoldConstants:{'kind': 'success', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:36:10,805 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfStaticBilstmOpt:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:36:11,323 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Try to optimize Dynamic LSTM ops.
+2021-12-20 20:36:11,369 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Graph transformations:
+['remove_nodes(op=Identity)']
+2021-12-20 20:36:14,864 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfLstmToCudnnRnn:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:36:14,909 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Try to optimize Dynamic LSTM ops.
+2021-12-20 20:36:14,955 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Graph transformations:
+['remove_nodes(op=Identity)']
+2021-12-20 20:36:19,153 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfLstmToCudnnRnn:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:36:19,153 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] CombinedSwitch:{'kind': 'performace_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:36:19,157 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] CombinedSequence:{'kind': 'performace_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:36:19,734 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Found 0 optimizable Bilstm op
+2021-12-20 20:36:19,736 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfCudnnrnnBilstm:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:36:19,871 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Graph transformations:
+['remove_nodes(op=Identity)']
+2021-12-20 20:36:24,674 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfFoldBatchNorms:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:36:25,247 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfNonMaxSuppressionOpt: total 0 NMS ops replaced with BladeFastNMS ones
+2021-12-20 20:36:25,249 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfNonMaxSuppressionOpt:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:36:39,865 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/inputy7gkv4ze.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/output7jzhn4v9.npy in subproc_run
+2021-12-20 20:36:39,865 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/inputy7gkv4ze.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/output7jzhn4v9.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 600.0, shell mode: True
+2021-12-20 20:36:41,067 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:36:41,066 [20988] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/inputy7gkv4ze.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/output7jzhn4v9.npy']
+
+2021-12-20 20:36:41,068 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:36:41,067 [20988] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/inputy7gkv4ze.npy
+
+2021-12-20 20:36:46,099 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:36:46,099 [20988] [WARNING ] [subproc_runner_helper.py:9] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:36:46,125 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:36:46,124 [20988] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+
+2021-12-20 20:36:54,623 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:36:54,623 [20988] [INFO    ] [subproc_runner_helper.py:9] Save profile helper results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/output7jzhn4v9.npy
+
+2021-12-20 20:36:55,235 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/inputy7gkv4ze.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/output7jzhn4v9.npy
+2021-12-20 20:36:55,236 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Details:
+elapsed: 8.956, env config: {}
+
+2021-12-20 20:36:57,992 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/input2lwsh4yy.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/outputfh6f3x6p.npy in subproc_run
+2021-12-20 20:36:57,993 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/input2lwsh4yy.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/outputfh6f3x6p.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 600.0, shell mode: True
+2021-12-20 20:36:59,171 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:36:59,171 [21033] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/input2lwsh4yy.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/outputfh6f3x6p.npy']
+
+2021-12-20 20:36:59,172 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:36:59,171 [21033] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/input2lwsh4yy.npy
+
+2021-12-20 20:37:02,755 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:37:02,755 [21033] [WARNING ] [subproc_runner_helper.py:9] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:37:02,770 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:37:02,770 [21033] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+
+2021-12-20 20:37:09,031 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:37:09,030 [21033] [INFO    ] [subproc_runner_helper.py:9] Save profile helper results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/outputfh6f3x6p.npy
+
+2021-12-20 20:37:09,629 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/input2lwsh4yy.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile__57ugobn_20211220203633/outputfh6f3x6p.npy
+2021-12-20 20:37:09,631 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Details:
+elapsed: 6.360, env config: {}
+
+2021-12-20 20:37:09,631 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Precision verification failed with the 0th result
+2021-12-20 20:37:09,631 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Length of the array: [[0.78228915 0.21771085]]
+2021-12-20 20:37:09,633 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Shape of the array: (1, 2)
+2021-12-20 20:37:09,634 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2/2(1002f%) entries violated the tolerances
+2021-12-20 20:37:09,634 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] The most violated pairs:
+2021-12-20 20:37:09,634 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] original model result: 0.21771085, optimized model result: 0.122892894, index: (0, 1)
+2021-12-20 20:37:09,634 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] original model result: 0.78228915, optimized model result: 0.877107, index: (0, 0)
+2021-12-20 20:37:09,652 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfAutoMixedPrecisionGpu:{'kind': 'accuracy_failed', 'speedup': 1.4083347772024621, 'pre_run_ms': 8.956477409899234, 'post_run_ms': 6.359622410014271, 'pattern_count': 0}
+2021-12-20 20:37:09,705 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Run TfAicompilerGpuPass with config: {'enable': True, 'enable_bace': False, 'enable_control_flow': False, 'optimize_for_static_shape': False, 'optimize_for_dynamic_shape': True, 'enable_eager_compilation': True, 'enable_static_shape_exhausted_fusion': False}
+2021-12-20 20:37:15,994 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/inputn5h_wkxn.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/outputmuqkeed7.npy in subproc_run
+2021-12-20 20:37:15,994 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/inputn5h_wkxn.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/outputmuqkeed7.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 600.0, shell mode: True
+2021-12-20 20:37:17,185 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:37:17,184 [21078] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/inputn5h_wkxn.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/outputmuqkeed7.npy']
+
+2021-12-20 20:37:17,186 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:37:17,185 [21078] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/inputn5h_wkxn.npy
+
+2021-12-20 20:37:22,238 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:37:22,238 [21078] [WARNING ] [subproc_runner_helper.py:9] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:37:22,263 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:37:22,263 [21078] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+
+2021-12-20 20:37:30,603 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:37:30,603 [21078] [INFO    ] [subproc_runner_helper.py:9] Save profile helper results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/outputmuqkeed7.npy
+
+2021-12-20 20:37:31,223 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/inputn5h_wkxn.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/outputmuqkeed7.npy
+2021-12-20 20:37:31,224 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Details:
+elapsed: 8.998, env config: {}
+
+2021-12-20 20:37:37,437 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/inputw9a47hh2.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/output_b3q1jb2.npy in subproc_run
+2021-12-20 20:37:37,437 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/inputw9a47hh2.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/output_b3q1jb2.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 600.0, shell mode: True
+2021-12-20 20:37:38,613 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:37:38,612 [21123] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/inputw9a47hh2.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/output_b3q1jb2.npy']
+
+2021-12-20 20:37:38,613 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:37:38,613 [21123] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/inputw9a47hh2.npy
+
+2021-12-20 20:37:43,550 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:37:43,550 [21123] [WARNING ] [subproc_runner_helper.py:9] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:37:43,575 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:37:43,575 [21123] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+
+2021-12-20 20:37:43,648 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:37:43,648 [21123] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/util/../lib/libtao_ops.so
+
+2021-12-20 20:42:43,711 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:42:43,710 [21123] [INFO    ] [subproc_runner_helper.py:9] Save profile helper results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/output_b3q1jb2.npy
+
+2021-12-20 20:42:44,171 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] [WARN] [/aicompiler_src/tao/third_party/blade_service_common/third_party/aliyun-log-c-sdk/src/log_producer_sender.c:356] send fail, discard data, project : blade-cn-wulanchabu, logstore : metric-sdk, buffer len : 485, raw len : 513, total buffer : 0, code : 404, error msg : {"errorCode":"ProjectNotExist","errorMessage":"The Project does not exist: blade-cn-wulanchabu"}
+[WARN] [/aicompiler_src/tao/third_party/blade_service_common/third_party/aliyun-log-c-sdk/src/log_producer_sender.c:356] send fail, discard data, project : blade-cn-wulanchabu, logstore : metric-sdk, buffer len : 483, raw len : 513, total buffer : 0, code : 404, error msg : {"errorCode":"ProjectNotExist","errorMessage":"The Project does not exist: blade-cn-wulanchabu"}
+[WARN] [/aicompiler_src/tao/third_party/blade_service_common/third_party/aliyun-log-c-sdk/src/log_producer_sender.c:356] send fail, discard data, project : blade-cn-wulanchabu, logstore : metric-sdk, buffer len : 483, raw len : 513, total buffer : 0, code : 404, error msg : {"err
+2021-12-20 20:42:44,171 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] orCode":"ProjectNotExist","errorMessage":"The Project does not exist: blade-cn-wulanchabu"}
+[WARN] [/aicompiler_src/tao/third_party/blade_service_common/third_party/aliyun-log-c-sdk/src/log_producer_sender.c:356] send fail, discard data, project : blade-cn-wulanchabu, logstore : metric-sdk, buffer len : 483, raw len : 513, total buffer : 0, code : 404, error msg : {"errorCode":"ProjectNotExist","errorMessage":"The Project does not exist: blade-cn-wulanchabu"}
+[WARN] [/aicompiler_src/tao/third_party/blade_service_common/third_party/aliyun-log-c-sdk/src/log_producer_sender.c:356] send fail, discard data, project : blade-cn-wulanchabu, logstore : metric-sdk, buffer len : 483, raw len : 513, total buffer : 0, code : 404, error msg : {"errorCode":"ProjectNotExist","errorMessage":"The Project does not exist: blade-cn-wulanchabu"}
+
+2021-12-20 20:42:44,321 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/inputw9a47hh2.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_7kdvg3o4_20211220203709/output_b3q1jb2.npy
+2021-12-20 20:42:44,322 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Details:
+elapsed: 7.895, env config: {'BRIDGE_ENABLE_TAO': 'true', 'TAO_COMPILER_PATH': '/usr/local/lib/python3.6/dist-packages/blade/util/../lib/tao_compiler_main', 'TAO_COMPILATION_MODE_ASYNC': 'false', 'TAO_ENABLE_MLIR': 'true', 'TAO_MLIR_BRANCH_ONLY': 'true', 'TAO_EXPERIMENTAL_ENABLE_MLIR_WHOLE_GRAPH_COMPILATION': 'true'}
+
+2021-12-20 20:42:44,323 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfAicompilerGpu:{'kind': 'success', 'speedup': 1.1396955575159482, 'pre_run_ms': 8.998003330007196, 'post_run_ms': 7.895093799978494, 'pattern_count': 0}
+2021-12-20 20:42:44,329 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] CombinedSequence:{'kind': 'success', 'speedup': 1.1396955575159482, 'pre_run_ms': 8.998003330007196, 'post_run_ms': 7.895093799978494, 'pattern_count': 0}
+2021-12-20 20:42:44,484 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Optimize 0 patterns of LSTM element wise ops
+2021-12-20 20:42:44,484 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfLstmElementWiseOps:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:42:45,183 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Optimize 0 [shape->Gather->prod->stack](double=link) patterns by placing on host.
+2021-12-20 20:42:45,185 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Optimize 0 [shape->GatherV2->prod->stack](double=link) patterns by placing on host.
+2021-12-20 20:42:45,187 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Optimize 0 [shape->Gather->prod->stack](single-link) patterns by placing on host.
+2021-12-20 20:42:45,189 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Optimize 0 [shape->GatherV2->prod->stack](single-link) patterns by placing on host.
+2021-12-20 20:42:45,189 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Optimized by moving 0 ops to Host.
+2021-12-20 20:42:45,189 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfNodePlacement:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:42:45,239 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Try to optimize Fused Transformer Layernorm ops.
+2021-12-20 20:42:47,642 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfFuseNmtLayerNorms:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:42:47,691 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Try to Fuse Encoder Attention Pattern.
+2021-12-20 20:42:47,750 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [BladeAttentionReshapeTranspose] was found.
+2021-12-20 20:42:47,750 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [BladeAttentionReshapeTranspose] pattern.
+2021-12-20 20:42:47,762 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [Softmax] was found.
+2021-12-20 20:42:47,762 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [Softmax] pattern.
+2021-12-20 20:42:47,773 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [BladeFusedTransformerEncoderAttention] was found.
+2021-12-20 20:42:47,773 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [BladeFusedTransformerEncoderAttention] pattern.
+2021-12-20 20:42:47,773 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Level 2 Optimized 0 Patterns.
+2021-12-20 20:42:47,774 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfFuseNmtEncoderAttentions:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:42:48,415 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Try to optimize Transformer Decoder Attention Pattern.
+2021-12-20 20:42:48,474 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [BladeAttentionReshapeTranspose] was found.
+2021-12-20 20:42:48,474 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [BladeAttentionReshapeTranspose] pattern.
+2021-12-20 20:42:48,486 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [Softmax] was found.
+2021-12-20 20:42:48,486 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [Softmax] pattern.
+2021-12-20 20:42:48,498 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [GatherNdGatherNd] was found.
+2021-12-20 20:42:48,498 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [GatherNdGatherNd] pattern.
+2021-12-20 20:42:48,510 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [UnpackPackReshape] was found.
+2021-12-20 20:42:48,510 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [UnpackPackReshape] pattern.
+2021-12-20 20:42:48,522 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [TransformerDecoderWing] was found.
+2021-12-20 20:42:48,522 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [TransformerDecoderWing] pattern.
+2021-12-20 20:42:48,534 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [BladeFusedTransformerDecoderAttention] was found.
+2021-12-20 20:42:48,534 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [BladeFusedTransformerDecoderAttention] pattern.
+2021-12-20 20:42:48,534 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Level 2 Optimized 0 Patterns.
+2021-12-20 20:42:48,534 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 0
+2021-12-20 20:42:48,534 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 0
+2021-12-20 20:42:48,546 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [BladeAttentionReshapeTranspose] was found.
+2021-12-20 20:42:48,546 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [BladeAttentionReshapeTranspose] pattern.
+2021-12-20 20:42:48,557 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [Softmax] was found.
+2021-12-20 20:42:48,557 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [Softmax] pattern.
+2021-12-20 20:42:48,569 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [GatherNdGatherNdV1] was found.
+2021-12-20 20:42:48,569 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [GatherNdGatherNdV1] pattern.
+2021-12-20 20:42:48,581 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [TransformerDecoderWingV1] was found.
+2021-12-20 20:42:48,581 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [TransformerDecoderWingV1] pattern.
+2021-12-20 20:42:48,593 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] No candidate pattern for [BladeFusedTransformerDecoderAttentionV1] was found.
+2021-12-20 20:42:48,593 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] None Optimization for [BladeFusedTransformerDecoderAttentionV1] pattern.
+2021-12-20 20:42:48,593 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Level 2 Optimized 0 Patterns.
+2021-12-20 20:42:48,593 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 0
+2021-12-20 20:42:48,593 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 0
+2021-12-20 20:42:48,593 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfFuseNmtDecoderAttentions:{'kind': 'pattern_matching_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:42:48,643 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Try to optimize batch matmul ops.
+2021-12-20 20:42:50,451 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Graph transformations:
+['merge_duplicate_nodes']
+2021-12-20 20:42:55,428 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Graph transformations:
+['strip_unused_nodes']
+2021-12-20 20:43:00,647 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Graph transformations:
+['sort_by_execution_order']
+2021-12-20 20:43:10,906 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/inputugjf0z1r.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/outputp2glep9v.npy in subproc_run
+2021-12-20 20:43:10,907 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/inputugjf0z1r.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/outputp2glep9v.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 600.0, shell mode: True
+2021-12-20 20:43:12,100 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:43:12,100 [22431] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/inputugjf0z1r.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/outputp2glep9v.npy']
+
+2021-12-20 20:43:12,101 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:43:12,100 [22431] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/inputugjf0z1r.npy
+
+2021-12-20 20:43:17,050 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:43:17,050 [22431] [WARNING ] [subproc_runner_helper.py:9] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:43:17,075 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:43:17,075 [22431] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+
+2021-12-20 20:43:25,345 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:43:25,344 [22431] [INFO    ] [subproc_runner_helper.py:9] Save profile helper results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/outputp2glep9v.npy
+
+2021-12-20 20:43:25,954 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/inputugjf0z1r.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/outputp2glep9v.npy
+2021-12-20 20:43:25,956 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Details:
+elapsed: 9.016, env config: {}
+
+2021-12-20 20:43:32,136 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/inputtlugdx95.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/outputw4oe9xvk.npy in subproc_run
+2021-12-20 20:43:32,136 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/inputtlugdx95.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/outputw4oe9xvk.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 600.0, shell mode: True
+2021-12-20 20:43:33,338 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:43:33,337 [22477] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/inputtlugdx95.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/outputw4oe9xvk.npy']
+
+2021-12-20 20:43:33,338 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:43:33,338 [22477] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/inputtlugdx95.npy
+
+2021-12-20 20:43:38,225 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:43:38,224 [22477] [WARNING ] [subproc_runner_helper.py:9] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:43:38,249 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:43:38,249 [22477] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+
+2021-12-20 20:43:46,328 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:43:46,328 [22477] [INFO    ] [subproc_runner_helper.py:9] Save profile helper results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/outputw4oe9xvk.npy
+
+2021-12-20 20:43:46,926 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/inputtlugdx95.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_vja6hko3_20211220204304/outputw4oe9xvk.npy
+2021-12-20 20:43:46,928 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Details:
+elapsed: 9.091, env config: {}
+
+2021-12-20 20:43:46,939 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfOptimizeBatchMatmul:{'kind': 'performace_failed', 'speedup': 0.9918002487334961, 'pre_run_ms': 9.016123589947819, 'post_run_ms': 9.090664779990911, 'pattern_count': 0}
+2021-12-20 20:44:01,350 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/input5rv3osxf.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/outputpm3bp1y9.npy in subproc_run
+2021-12-20 20:44:01,351 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/input5rv3osxf.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/outputpm3bp1y9.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 600.0, shell mode: True
+2021-12-20 20:44:02,562 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:44:02,561 [22538] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/input5rv3osxf.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/outputpm3bp1y9.npy']
+
+2021-12-20 20:44:02,562 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:02,561 [22538] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/input5rv3osxf.npy
+
+2021-12-20 20:44:07,509 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:07,508 [22538] [WARNING ] [subproc_runner_helper.py:9] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:44:07,534 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:07,533 [22538] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+
+2021-12-20 20:44:15,783 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:15,783 [22538] [INFO    ] [subproc_runner_helper.py:9] Save profile helper results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/outputpm3bp1y9.npy
+
+2021-12-20 20:44:16,396 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/input5rv3osxf.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/outputpm3bp1y9.npy
+2021-12-20 20:44:16,398 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Details:
+elapsed: 9.042, env config: {}
+
+2021-12-20 20:44:19,069 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/inputftc6vwff.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/outputpcydpnss.npy in subproc_run
+2021-12-20 20:44:19,069 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/inputftc6vwff.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/outputpcydpnss.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 600.0, shell mode: True
+2021-12-20 20:44:20,269 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:44:20,268 [22583] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/inputftc6vwff.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/outputpcydpnss.npy']
+
+2021-12-20 20:44:20,270 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:20,268 [22583] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/inputftc6vwff.npy
+
+2021-12-20 20:44:23,849 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:23,849 [22583] [WARNING ] [subproc_runner_helper.py:9] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:44:23,865 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:23,865 [22583] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+
+2021-12-20 20:44:30,178 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:30,177 [22583] [INFO    ] [subproc_runner_helper.py:9] Save profile helper results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/outputpcydpnss.npy
+
+2021-12-20 20:44:30,779 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/inputftc6vwff.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_profile_gyz1t0xi_20211220204355/outputpcydpnss.npy
+2021-12-20 20:44:30,780 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Details:
+elapsed: 6.535, env config: {}
+
+2021-12-20 20:44:30,781 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Precision verification failed with the 0th result
+2021-12-20 20:44:30,781 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Length of the array: [[0.78228915 0.21771085]]
+2021-12-20 20:44:30,781 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Shape of the array: (1, 2)
+2021-12-20 20:44:30,782 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2/2(1002f%) entries violated the tolerances
+2021-12-20 20:44:30,782 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] The most violated pairs:
+2021-12-20 20:44:30,782 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] original model result: 0.21771085, optimized model result: 0.122892894, index: (0, 1)
+2021-12-20 20:44:30,782 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] original model result: 0.78228915, optimized model result: 0.877107, index: (0, 0)
+2021-12-20 20:44:30,799 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] TfAutoMixedPrecisionGpu:{'kind': 'accuracy_failed', 'speedup': 1.3835389413172123, 'pre_run_ms': 9.041681940034032, 'post_run_ms': 6.535184279978275, 'pattern_count': 0}
+2021-12-20 20:44:30,804 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] CombinedSequence:{'kind': 'performace_failed', 'speedup': None, 'pre_run_ms': None, 'post_run_ms': None, 'pattern_count': 0}
+2021-12-20 20:44:30,804 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] CombinedSwitch:{'kind': 'success', 'speedup': 1.1396955575159482, 'pre_run_ms': 8.998003330007196, 'post_run_ms': 7.895093799978494, 'pattern_count': 0}
+2021-12-20 20:44:37,591 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_cy00xkii_20211220204431/input8ptu6twc.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_cy00xkii_20211220204431/outputk1tz1wsx.npy in subproc_run
+2021-12-20 20:44:37,591 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Execute shell command: `/usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_cy00xkii_20211220204431/input8ptu6twc.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_cy00xkii_20211220204431/outputk1tz1wsx.npy`, cwd: /root/inference-optimization-benchmark/blade, timeout: 600.0, shell mode: True
+2021-12-20 20:44:38,790 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] /usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+2021-12-20 20:44:38,789 [22628] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: ['/usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_cy00xkii_20211220204431/input8ptu6twc.npy', '/root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_cy00xkii_20211220204431/outputk1tz1wsx.npy']
+
+2021-12-20 20:44:38,790 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:38,790 [22628] [INFO    ] [subproc_runner_helper.py:9] Load profile helper args from: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_cy00xkii_20211220204431/input8ptu6twc.npy
+
+2021-12-20 20:44:43,728 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:43,727 [22628] [WARNING ] [subproc_runner_helper.py:9] failed to import tf_contrib_module_op_def_2_4_0.py on error 'No module named 'blade.model.tf_contrib_module_op_def_2_4_0''. It may meet errors if the input graph contains tf contrib ops
+
+2021-12-20 20:44:43,753 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:43,752 [22628] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/lib/libblade_ops.so
+
+2021-12-20 20:44:43,825 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:44:43,825 [22628] [INFO    ] [subproc_runner_helper.py:9] Loading TF Custom Op:/usr/local/lib/python3.6/dist-packages/blade/util/../lib/libtao_ops.so
+
+2021-12-20 20:49:43,817 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] 2021-12-20 20:49:43,816 [22628] [INFO    ] [subproc_runner_helper.py:9] Save profile helper results to: /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_cy00xkii_20211220204431/outputk1tz1wsx.npy
+
+2021-12-20 20:49:44,278 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] [WARN] [/aicompiler_src/tao/third_party/blade_service_common/third_party/aliyun-log-c-sdk/src/log_producer_sender.c:356] send fail, discard data, project : blade-cn-wulanchabu, logstore : metric-sdk, buffer len : 485, raw len : 513, total buffer : 0, code : 404, error msg : {"errorCode":"ProjectNotExist","errorMessage":"The Project does not exist: blade-cn-wulanchabu"}
+[WARN] [/aicompiler_src/tao/third_party/blade_service_common/third_party/aliyun-log-c-sdk/src/log_producer_sender.c:356] send fail, discard data, project : blade-cn-wulanchabu, logstore : metric-sdk, buffer len : 483, raw len : 513, total buffer : 0, code : 404, error msg : {"errorCode":"ProjectNotExist","errorMessage":"The Project does not exist: blade-cn-wulanchabu"}
+[WARN] [/aicompiler_src/tao/third_party/blade_service_common/third_party/aliyun-log-c-sdk/src/log_producer_sender.c:356] send fail, discard data, project : blade-cn-wulanchabu, logstore : metric-sdk, buffer len : 483, raw len : 513, total buffer : 0, code : 404, error msg : {"err
+2021-12-20 20:49:44,278 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] orCode":"ProjectNotExist","errorMessage":"The Project does not exist: blade-cn-wulanchabu"}
+[WARN] [/aicompiler_src/tao/third_party/blade_service_common/third_party/aliyun-log-c-sdk/src/log_producer_sender.c:356] send fail, discard data, project : blade-cn-wulanchabu, logstore : metric-sdk, buffer len : 483, raw len : 513, total buffer : 0, code : 404, error msg : {"errorCode":"ProjectNotExist","errorMessage":"The Project does not exist: blade-cn-wulanchabu"}
+[WARN] [/aicompiler_src/tao/third_party/blade_service_common/third_party/aliyun-log-c-sdk/src/log_producer_sender.c:356] send fail, discard data, project : blade-cn-wulanchabu, logstore : metric-sdk, buffer len : 483, raw len : 513, total buffer : 0, code : 404, error msg : {"errorCode":"ProjectNotExist","errorMessage":"The Project does not exist: blade-cn-wulanchabu"}
+
+2021-12-20 20:49:44,428 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] retcode: 0, command: /usr/bin/python3 /usr/local/lib/python3.6/dist-packages/blade/profiling/subproc_runner_helper.py /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_cy00xkii_20211220204431/input8ptu6twc.npy /root/inference-optimization-benchmark/blade/20211220203357_shg2r507/subproc_run_cy00xkii_20211220204431/outputk1tz1wsx.npy
+2021-12-20 20:49:44,430 [20698] [INFO    ] [benchmark_blade_bert_base.py:146] Details:
+elapsed: 7.879, env config: {'BRIDGE_ENABLE_TAO': 'true', 'TAO_COMPILER_PATH': '/usr/local/lib/python3.6/dist-packages/blade/util/../lib/tao_compiler_main', 'TAO_COMPILATION_MODE_ASYNC': 'false', 'TAO_ENABLE_MLIR': 'true', 'TAO_MLIR_BRANCH_ONLY': 'true', 'TAO_EXPERIMENTAL_ENABLE_MLIR_WHOLE_GRAPH_COMPILATION': 'true'}
+

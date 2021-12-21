@@ -1,0 +1,19 @@
+[Progress] 5%, phase: user_test_data_validation.
+[Progress] 10%, phase: test_data_deduction.
+[Progress] 15%, phase: CombinedSequence_4.
+[Progress] 24%, phase: TfFuseEmbedding_25.
+[Progress] 33%, phase: TfStripUnusedNodes_26.
+[Progress] 42%, phase: TfFoldConstants_27.
+[Progress] 51%, phase: CombinedSequence_10.
+[Progress] 59%, phase: TfCudnnrnnBilstm_28.
+[Progress] 68%, phase: TfFoldBatchNorms_29.
+[Progress] 77%, phase: TfNonMaxSuppressionOpt_30.
+[Progress] 86%, phase: CombinedSwitch_23.
+[Progress] 95%, phase: model_collecting.
+[Progress] 100%, Finished!
+
+optimizations:
+	- Tf2TrtPlus
+        - TfStripUnusedNodes
+        - TfFoldConstants
+      	- TfAicompilerGpu

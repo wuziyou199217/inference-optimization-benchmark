@@ -33,7 +33,6 @@ import tensorflow.compat.v1 as tf
 
 # Blade
 import blade
-# from blade.model.tf_model import TfModel
 
 import logging
 import logging.handlers
@@ -54,43 +53,40 @@ if gpus:
         print("experimental.set_memory_growth option is not available: {}".format(e))
 
 ######################################################################
-# Download required files
+# Required files
 # -----------------------
 
-model_path = "../models/frozen_resnet50_v1.pb" 
-img_path = "../images/elephant-299.jpg"
-# img_path = download_testdata(image_url, img_name, module="data")
-# map_proto_path = download_testdata(map_proto_url, map_proto, module="data")
-# label_path = download_testdata(label_map_url, label_map, module="data")
+model_path = "../models/BERT-Base_Uncased_tf.pb" 
 
 ######################################################################
 # Inference on tensorflow
 # -----------------------
 # Run the corresponding model on tensorflow
 
-def create_graph_and_image(model, image):
+def create_graph_and_dic(model, batch_size, precise):
     # Creates graph from saved graph_def.pb.
     with tf.gfile.GFile(model, "rb") as f:
         graph_def = tf.GraphDef()
         graph_def.ParseFromString(f.read())
-    # Prepare image data
-    if not tf.gfile.Exists(image):
-        tf.logging.fatal("File does not exist %s", image)
-    raw_data = tf.gfile.GFile(image, "rb").read()
-    tf_data = tf.image.decode_jpeg(raw_data)
-    tf_data = tf.image.resize_images(tf_data, (224, 224))
-    image_data = tf.keras.preprocessing.image.img_to_array(tf_data)
-    image_data = np.expand_dims(image_data, axis = 0)
-    return graph_def, image_data
+    # Prepare input dictionary
+    input_ids_1 = np.random.random((batch_size, 128)).astype(precise)
+    input_mask_1 = np.random.random((batch_size, 128)).astype(precise)
+    segment_ids_1 = np.random.random((batch_size, 128)).astype(precise)
 
-graph_def, image_data = create_graph_and_image(model_path, img_path)
+    input_dic = {"input_ids_1:0": input_ids_1,
+                    "input_mask_1:0": input_mask_1,
+                    "segment_ids_1:0": segment_ids_1}
+    
+    return graph_def, input_dic 
+
+graph_def, input_dic = create_graph_and_dic(model_path, 1, np.float32)
 
 ######################################################################
 # Tensorflow Benchmark
 # ------------------
 # Generate Benchmark for tensorflow pb graph inference.
 
-def tf_benchmark(graph_def, image_data, run_count, times_per_run):
+def tf_benchmark(graph_def, input_dic, run_count, times_per_run):
     """
     Benchmark the model
     """    
@@ -99,12 +95,12 @@ def tf_benchmark(graph_def, image_data, run_count, times_per_run):
     with tf.Session() as sess:
         sess.graph.as_default()
         tf.import_graph_def(graph_def, name="")
-        softmax_tensor = sess.graph.get_tensor_by_name("resnet_v1_50/predictions/Reshape_1:0")
+        softmax_tensor = sess.graph.get_tensor_by_name("loss/Softmax:0")
         # Benchmark! 
         duration_list = np.array([])
         for i in range(run_count):
             time_start = time.time()
-            sess.run(softmax_tensor, {"input:0": image_data})
+            sess.run(softmax_tensor, input_dic)
             time_end = time.time()
             duration = (time_end - time_start) * 1000
             duration_list = np.append(duration_list, duration)
@@ -128,14 +124,14 @@ def tf_benchmark(graph_def, image_data, run_count, times_per_run):
         print(pos99)
     return
 
-# tf_benchmark(graph_def, image_data, 1000, 1)
+# tf_benchmark(graph_def, input_dic, 1000, 1)
 
 ######################################################################
 # Tensorflow+Blade Benchmark
 # ------------------
 # Generate optimized model by Blade.
 
-def blade_optimize(graph_def, image_data, aggressive_opt):
+def blade_optimize(graph_def, input_dic, aggressive_opt):
     """
     Optimize the model by Blade
     """    
@@ -147,17 +143,18 @@ def blade_optimize(graph_def, image_data, aggressive_opt):
         graph_def,             # 模型graph。
         opt_level,             # O1无损优化。或O2有损优化
         device_type='gpu',     # 面向GPU设备优化。
-        test_data=[{"input:0": image_data}] # 测试数据
+        test_data=[input_dic]  # 测试数据
     )
     
     # 打印优化报告
     print(report)
     # 存储优化模型
-    # with tf.gfile.FastGFile('frozen_resnet50_v1_opt.pb', mode='wb') as f:
+    # with tf.gfile.FastGFile('bert_base_opt.pb', mode='wb') as f:
     #     f.write(optimized_model.SerializeToString())
     return optimized_model, opt_spec
 
-optimized_model, opt_spec = blade_optimize(graph_def, image_data, False)
+optimized_model, opt_spec = blade_optimize(graph_def, input_dic, False)
+# optimized_model, opt_spec = blade_optimize(graph_def, input_dic, True)
 
 with opt_spec:
-    tf_benchmark(optimized_model, image_data, 1000, 1)
+    tf_benchmark(optimized_model, input_dic, 1000, 1)
